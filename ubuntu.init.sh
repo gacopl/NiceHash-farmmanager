@@ -66,7 +66,7 @@ start_NH() {
 	done
 
 	log_daemon_msg "Starting $DESC"
-	start-stop-daemon --start --quiet --pidfile "$NH_PIDFILE" --chdir "$NH_HOME" --chuid "$NH_USER" --oknodo --exec "$PYTHON_BIN" $SSD_OPTS -- \
+	start-stop-daemon --start --quiet --background --pidfile "$NH_PIDFILE" --make-pidfile --chdir "$NH_HOME" --chuid "$NH_USER" --oknodo --exec "$PYTHON_BIN" $SSD_OPTS -- \
 		nhmfm.py --daemon --quiet --pid_file="$NH_PIDFILE" --data_dir="$NH_DATA" $NH_OPTS
 	log_end_msg $? || exit $?
 }
