@@ -64,6 +64,7 @@ start_NH() {
 			install --directory --owner="$NH_USER" --group=root --mode=0750 "$D" || exit 1;
 		}
 	done
+	chown -R $NH_USER:$NH_USER $NH_DATA
 
 	log_daemon_msg "Starting $DESC"
 	start-stop-daemon --start --quiet --background --pidfile "$NH_PIDFILE" --make-pidfile --chdir "$NH_HOME" --chuid "$NH_USER" --oknodo --exec "$PYTHON_BIN" $SSD_OPTS -- \
