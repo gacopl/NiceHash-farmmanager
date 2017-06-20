@@ -16,11 +16,13 @@ $.ajax({
    data: {rigs:rigs},
    traditional: true,
    url: "setRigs",
-   success: function(msg){
-     $('.answer').html(msg);
-   }
+   success: function(response){
+                        response = JSON.parse(response)
+                        console.log(response)
+                        window.location.href = response.redirect;
+                    }
 });
-window.location.href = '/nhmfm'
+//window.location.href = '/nhmfm'
 }
 
 function add() {
