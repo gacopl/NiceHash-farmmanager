@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(['manage.py'],
-             pathex=['C:\\Users\\gaco\\Desktop\\NHM-farmmanager\\nhmfarmmanager'],
+             pathex=['/home/gaco/dev/NiceHash-farmmanager/nhmfarmmanager'],
              binaries=[],
              datas=[],
-             hiddenimports=['nhmfm.apps', 'django.contrib.auth.apps', 'django.contrib.auth.apps', 'django.contrib.contenttypes.apps', 'django.contrib.sessions.apps', 'django.contrib.messages.apps', 'django.contrib.staticfiles.apps', 'django.contrib.admin.apps', 'nhmfm.urls', 'django.contrib.messages.middleware', 'django.contrib.auth.middleware', 'django.middleware.security', 'django.contrib.sessions.middleware', 'django.middleware.common', 'django.middleware.csrf', 'django.contrib.auth.middleware', 'django.contrib.messages.middleware', 'django.middleware.clickjacking', 'django.contrib.sessions.serializers'],
+             hiddenimports=['encodings', 'nhmfm.apps', 'django.contrib.auth.apps', 'django.contrib.auth.apps', 'django.contrib.contenttypes.apps', 'django.contrib.sessions.apps', 'django.contrib.messages.apps', 'django.contrib.staticfiles.apps', 'django.contrib.admin.apps', 'nhmfm.urls', 'django.contrib.messages.middleware', 'django.contrib.auth.middleware', 'django.middleware.security', 'django.contrib.sessions.middleware', 'django.middleware.common', 'django.middleware.csrf', 'django.contrib.auth.middleware', 'django.contrib.messages.middleware', 'django.middleware.clickjacking', 'django.contrib.sessions.serializers'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
