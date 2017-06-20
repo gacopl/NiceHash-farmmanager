@@ -9,12 +9,15 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
     <title>NiceHash Miner</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'Style.css' %}" />
-    <script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+    <link rel="stylesheet" href="static/Style.css" />
+    <script src="static/jquery-3.2.1.min.js"></script>
 
     <script>
-        var miners = [{% for rig in rigs %}"{{ rig.ip }}",{% endfor %}]
+        var miners = [
+        % for rig in rigs: 
+        "${rig['ip']}", 
+        % endfor 
+        ]
         var farmRateBTC = 0.0
         var farmRateCurrency = 0.0
         var farmBTCBalance = 0.0
@@ -134,7 +137,7 @@
 
 </head>
 <body>
-    <h1>NiceHash Miner Farm Monitor <a href="admin/nhmfm">Configure</a></h1> 
+    <h1>NiceHash Miner Farm Monitor <a href="config">Configure</a></h1> 
     <div id="farm">
         <h2>Total rate: <span id="farmRateBTC"></span> mBTC/Day (<span id="farmRateCurrency"></span> <span id="farmCurrencyName"></span>/Day) <span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>  Unpaid Balance: <span id="farmBTCBalance"></span> mBTC (<span id="farmCurrencyBalance"></span> <span id="farmCurrencyName2"></span>) </h2>
         <h2>Bitcoin Exchange Rate: <span id="BTCExRate"></span></h2>

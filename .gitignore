@@ -1,7 +1,7 @@
 *.pyc
 __pycache__/
-nhmfarmmanager/build/
-nhmfarmmanager/dist/
+build/
+dist/
 
 
 

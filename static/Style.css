@@ -1,0 +1,44 @@
+﻿body
+{
+    font-family: sans-serif;
+}
+.bold-red {
+    color: red;
+    font-weight: bold;
+}
+#customForm {
+    display: flex;
+    flex-flow: row wrap;
+}
+ 
+#customForm fieldset {
+    flex: 1;
+    border: 1px solid #aaa;
+    margin: 0.5em;
+}
+ 
+#customForm fieldset legend {
+    padding: 5px 20px;
+    border: 1px solid #aaa;
+    font-weight: bold;
+}
+ 
+#customForm fieldset.name {
+    flex: 2 100%;
+}
+ 
+#customForm fieldset.name legend {
+    background: #bfffbf;
+}
+ 
+#customForm fieldset.office legend {
+    background: #ffffbf;
+}
+ 
+#customForm fieldset.hr legend {
+    background: #ffbfbf;
+}
+ 
+#customForm div.DTE_Field {
+    padding: 5px;
+}
