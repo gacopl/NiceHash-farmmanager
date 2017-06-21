@@ -6,9 +6,12 @@ import json
 import urllib.request, urllib.error, urllib.error, json
 from socket import timeout
 
+from cherrypy.lib import auth_digest
 from mako.template import Template
 
 cherrypy.config.update("nhmfm.conf")
+
+USERS = {cherrypy.config.get("username"): cherrypy.config.get("password")}
 
 db = "db.sqlite3"
 
@@ -70,13 +73,15 @@ class NHMFM(object):
 	def connect_db(self):
 		return sqlite3.connect(db)
 
-
-
 if __name__ == '__main__':
     conf = {
     	'/': {
             'tools.sessions.on': True,
-            'tools.staticdir.root': os.path.abspath(os.getcwd())
+            'tools.staticdir.root': os.path.abspath(os.getcwd()),
+            'tools.auth_digest.on': True,
+        	'tools.auth_digest.realm': 'localhost',
+        	'tools.auth_digest.get_ha1': auth_digest.get_ha1_dict_plain(USERS),
+        	'tools.auth_digest.key': 'a565c2794376791cfa'
         },
         '/static': {
             'tools.staticdir.on': True,
