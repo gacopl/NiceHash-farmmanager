@@ -22,3 +22,10 @@ Please feel free to contribute I am no html expert at all, it's working but it c
 
 # Tips
 19EzHxJ5MD6sCD5Bwp1Z7n4rPboGrvoWnL
+
+# Roadmap (if tips will be coming...)
+* Update NHM-gaco-mod with proper API with keys instead of webmanager
+* Add control over your nhm mining rigs (start/stop)
+* Update your mining rigs from one place
+* Configure your mining rigs (algos and settings) through farm manager UI
+
