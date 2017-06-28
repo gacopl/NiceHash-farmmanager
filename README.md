@@ -21,7 +21,7 @@ and then you can do service nhmfm start/stop/status (at least in Ubuntu)
 Please feel free to contribute I am no html expert at all, it's working but it could be looking better
 
 # Tips
-19EzHxJ5MD6sCD5Bwp1Z7n4rPboGrvoWnL
+1Cnb8ievaqvsJwg5VL5xiss2EzGLYu1HD6
 
 # Roadmap (if tips will be coming...)
 * Update NHM-gaco-mod with proper API with keys instead of webmanager
